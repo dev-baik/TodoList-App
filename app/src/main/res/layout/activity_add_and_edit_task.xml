@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="view"
+            type="com.example.todolist_app.presentation.todolist.ui.AddAndEditTaskActivity" />
+
+        <variable
+            name="viewModel"
+            type="com.example.todolist_app.presentation.todolist.viewmodel.AddAndEditTaskViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_add_and_edit"
+            style="@style/TextView.Title.24_B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/add_task_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_task"
+            style="@style/TextView.Title.20_R"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bg_stroke_00b0f0_30dp"
+            android:hint="@string/add_and_edit_task_task_hint"
+            android:paddingHorizontal="35dp"
+            android:paddingVertical="20dp"
+            android:text="@={viewModel.task}"
+            android:textColorHint="@color/color_bfbfbf"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_add_and_edit" />
+
+        <Button
+            android:id="@+id/btn_Date"
+            style="@style/TextView.Title.20_R"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_stroke_00b0f0_30dp"
+            android:gravity="center_vertical"
+            android:hint="@string/add_and_edit_task_date_hint"
+            android:onClick="@{() -> view.showDatePickerDialog()}"
+            android:paddingHorizontal="35dp"
+            android:paddingVertical="20dp"
+            android:text="@{viewModel.date}"
+            android:textColorHint="@color/color_bfbfbf"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_task" />
+
+        <Button
+            android:id="@+id/btn_add_and_edit"
+            style="@style/TextView.Title.20_R"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bg_00b0f0_radius_30dp"
+            android:onClick="@{() -> viewModel.insertData()}"
+            android:paddingVertical="20dp"
+            android:text="@string/add_task_add"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

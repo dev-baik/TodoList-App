@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/registerUserFragment">
+
+    <fragment
+        android:id="@+id/registerUserFragment"
+        android:name="com.example.todolist_app.presentation.register.ui.RegisterUserFragment"
+        android:label="RegisterUserFragment"
+        tools:layout="@layout/fragment_register_user">
+        <action
+            android:id="@+id/action_registerUserFragment_to_startUserFragment"
+            app:destination="@id/startUserFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/startUserFragment"
+        android:name="com.example.todolist_app.presentation.register.ui.StartUserFragment"
+        android:label="StartUserFragment"
+        tools:layout="@layout/fragment_start_user">
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <argument
+            android:name="userBirthday"
+            app:argType="string" />
+        <argument android:name="userImage"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_startUserFragment_to_todoListFragment"
+            app:destination="@id/todoListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/todoListFragment"
+        android:name="com.example.todolist_app.presentation.todolist.ui.TodoListFragment"
+        android:label="TodoListFragment"
+        tools:layout="@layout/fragment_todo_list">
+        <argument
+            android:name="userImage"
+            app:argType="string" />
+    </fragment>
+</navigation>

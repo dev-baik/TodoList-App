@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">TodoList-App</string>
+
+    <!-- RegisterUserFragment -->
+    <string name="register_user_name_hint">Name</string>
+    <string name="register_user_birthday_hint">Birthday</string>
+    <string name="register_user_register">Register</string>
+
+    <!-- StartUserFragment -->
+    <string name="start_user_start">Start</string>
+
+    <!-- TodoListFragment -->
+    <string name="todo_list_title">TODO LIST</string>
+
+    <!-- AddAndEditTaskActivity -->
+    <string name="add_task_title">ADD TASK</string>
+    <string name="add_task_add">ADD</string>
+    <string name="edit_task_title">EDIT TASK</string>
+    <string name="edit_task_edit">EDIT</string>
+    <string name="add_and_edit_task_task_hint">Task</string>
+    <string name="add_and_edit_task_date_hint">Date</string>
+
+</resources>
