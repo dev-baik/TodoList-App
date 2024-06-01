@@ -12,9 +12,9 @@
     </td>
   </tr>
   <tr>
-    <th align="center">사용자 등록 페이지</th>
-    <th align="center">카메라 (with CameraX)</th>
-    <th align="center">사용자 시작 페이지</th>
+    <th align="center">사용자 등록 화면</th>
+    <th align="center">카메라 (CameraX)</th>
+    <th align="center">사용자 시작 화면</th>
   </tr>
 </table>
 <table>
@@ -30,9 +30,9 @@
     </td>
   </tr>
   <tr>
-    <th align="center">TODO LIST 페이지</th>
-    <th align="center">ADD TASK 페이지</th>
-    <th align="center">EDIT TASK 페이지</th>
+    <th align="center">TODO LIST 화면</th>
+    <th align="center">ADD TASK 화면</th>
+    <th align="center">EDIT TASK 화면</th>
   </tr>
 </table>
 
@@ -60,7 +60,7 @@ https://github.com/dev-baik/TodoList-App/assets/96613859/8cb659ea-089c-4717-a339
 | Language | Kotlin |
 | UI | Xml |
 | Archictecture | Clean Architecture, MVVM |
-| Jetpack Components | DataBinding, LiveData, Lifecycle, ViewModel, Navigation, Room, CameraX |
+| Jetpack Components | DataBinding, LiveData, Lifecycle, ViewModel, Room, CameraX |
 | Dependency Injection | Dagger Hilt |
 | Asynchronous Processing | Flow, Coroutine |
 | Third Party Library | Glide |
